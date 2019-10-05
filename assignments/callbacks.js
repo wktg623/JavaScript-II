@@ -97,12 +97,15 @@ const includeItem = contains('Gum', items, item => `${item}`);
 console.log(includeItem);
 
 /* STRETCH PROBLEM */
-const x = ["tom", "jo", "wes", "tom"];
+const names = ["tom", "jo", "wes", "tom"];
 
 function removeDuplicates(array, cb) {
   // removeDuplicates removes all duplicate values from the given array.
   // Pass the duplicate free array to the callback function.
   // Do not mutate the original array.
-  cb(array);
+ 
+ return cb([...new Set(array)]);
 }
-for(i = 0; i<x.length; i++){}
+const remove = removeDuplicates(names, item =>`${item}`);
+const backToArray = [remove];
+console.log(backToArray);

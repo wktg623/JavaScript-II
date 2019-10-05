@@ -25,7 +25,15 @@ television('Netflix');
 
 
 // ==== Challenge 2: Implement a "counter maker" function ====
+let count = 0;
 const counterMaker = () => {
+ 
+  
+  
+  function counter(){
+   return ++count;
+  }
+  return counter();
   // IMPLEMENTATION OF counterMaker:
   // 1- Declare a `count` variable with a value of 0. We will be mutating it, so declare it using `let`!
   // 2- Declare a function `counter`. It should increment and return `count`.
@@ -33,6 +41,15 @@ const counterMaker = () => {
   //      "closes over" the `count` variable. It can "see" it in the parent scope!
   // 3- Return the `counter` function.
 };
+
+console.log(counterMaker());
+console.log(counterMaker());
+console.log(counterMaker());
+console.log(counterMaker());
+console.log(counterMaker());
+console.log(counterMaker());
+console.log(counterMaker());
+
 // Example usage: const myCounter = counterMaker();
 // myCounter(); // 1
 // myCounter(); // 2
@@ -40,6 +57,7 @@ const counterMaker = () => {
 // ==== Challenge 3: Make `counterMaker` more sophisticated ====
 // It should have a `limit` parameter. Any counters we make with `counterMaker`
 // will refuse to go over the limit, and start back at 1.
+
 
 // ==== Challenge 4: Create a counter function with an object that can increment and decrement ====
 const counterFactory = () => {
