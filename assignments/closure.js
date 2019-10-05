@@ -3,6 +3,22 @@
 // Keep it simple! Remember a closure is just a function
 // that manipulates variables defined in the outer scope.
 // The outer scope can be a parent function, or the top level of the script.
+function television(channel){
+let firstChannel = "Comedy Central";
+let secondChannel = "TBS";
+
+
+
+  function comedy(title){
+
+    function show(episode){
+console.log(`The ${episode} episode of ${title} is on ${channel} but not on ${firstChannel}.`)
+    } 
+    show('Pilot');
+  }
+  comedy('Scrubs');
+}
+television('Netflix');
 
 
 /* STRETCH PROBLEMS, Do not attempt until you have completed all previous tasks for today's project files */
